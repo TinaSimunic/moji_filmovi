@@ -17,6 +17,10 @@ class EkranDetalja extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text(film.name, maxLines: 1, overflow: TextOverflow.ellipsis),
       ),
       body: SingleChildScrollView(
